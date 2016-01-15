@@ -33,12 +33,18 @@ function register() {
 	membersListElem.innerHTML = "";
 	for (var i = 0; i < members.length; i++) {
 		var memberElem = document.createElement('li');
-		memberElem.innerText = members[i].name;
-		membersListElem.appendChild(memberElem)
+		memberElem.innerText = "Name: " + members[i].name;
+		membersListElem.appendChild(memberElem);
+		var memberEmailElem = document.createElement('li');
+		memberEmailElem.innerText = "Email: " + members[i].email;
+		membersListElem.appendChild(memberEmailElem);
+		var memberPasswordElem = document.createElement('li');
+		memberPasswordElem.innerText = "Password: " + members[i].password;
+		membersListElem.appendChild(memberPasswordElem)
 	}
-	
-	
-	
+
+
+
 
 	console.log(members)
 }
